@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Geo Location Test Page</title>
+    <link rel="stylesheet" type="text/css" href="http://pasteup.guim.co.uk/css/core.pasteup.min.css"/>
+    <link rel="stylesheet" type="text/css"
+          href="http://static.guim.co.uk/static/b9dbdbd52b575dcdff51895290c041c46660ce8f/common/styles/article-top.css"/>
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.8.1/jquery.min.js"></script>
+    <script src="http://pasteup.guim.co.uk/js/lib/requirejs/1.0.8/require.js"></script>
+    <script src="http://pasteup.guim.co.uk/js/lib/jquery.cookie/1.2/jquery.cookie.min.js"></script>
+    <script>
+        var jQ = jQuery.noConflict();
+        var commonStaticRoot = "";
+    </script>
+    <script src="http://static.guim.co.uk/static/b9dbdbd52b575dcdff51895290c041c46660ce8f/common/scripts/gu-core.js"></script>
+    <script src="../static/geo-location-1.0.js"></script>
+    <script>
+        jQuery(document).ready(function() {
+            new guardian.GeoLocation().init()
+        });
+    </script>
+</head>
+<body>
+
+<style type="text/css">
+    .epl_container,.epl_top_container, .spon_left, .spon_right, .epl_clear{display:block;margin:0px;padding:0px;min-height:0px;font-size:0px;border:0px;white-space:nowrap;}
+    .epl_container{background-color:#000000;}
+    .epl_top_container{background:#F9F9F9 url(http://l.yimg.com/i/i/uk/any/e/bkg.jpg) repeat-x scroll top;}
+    .spon_left{width:140px;float:left;height:60px;overflow:hidden;background:#000000 url(http://l.yimg.com/i/i/uk/any/e/ylogo.jpg) no-repeat;}
+    .spon_right{width:160px;float:right;height:60px;overflow:hidden;background:#000000 url(http://l.yimg.com/i/i/uk/any/e/right.jpg) no-repeat;}
+    .epl_clear{clear:both;}
+</style>
+
+<!-- Container  of top banner + player : banner shall adapt from 300 to 640px -->
+<div class="epl_container" style="width:300px;" data-only-in-country="GB">
+    <div class="epl_top_container">
+        <div class="spon_left"></div>
+        <div class="spon_right"></div>
+        <div class="epl_clear"></div>
+    </div>
+    <!-- if more than one player is to be embedded on the page, each "object and embed" tag needs a unique "id" attribute value; i.e. id="yahoovideoplayer1", id="yahoovideoplayer2", etc..   -->
+    <object classid="clsid:D27CDB6E-AE6D-11cf-96B8-444553540000" width="300" height="309" id="yahoovideoplayer1">
+        <param name="allowScriptAccess" value="always">
+        <param name="allowfullscreen" value="true">
+        <param name="movie" value="http://d.yimg.com/nl/premier-league/guardian/player.swf">
+        <param name="flashVars" value="vid=31096271&amp;playlistId=20682645&amp;lang=en-GB">
+        <param name="wmode" value="transparent">
+        <embed allowfullscreen="true" id="yahoovideoplayer1" src="http://d.yimg.com/nl/premier-league/guardian/player.swf" type="application/x-shockwave-flash" allowscriptaccess="always" flashvars="vid=31096271&amp;playlistId=20682645&amp;lang=en-GB" width="300" height="309"></object>
+</div>
+
+</body>
+</html>

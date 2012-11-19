@@ -1,0 +1,13 @@
+application: guardian-geo-location
+version: 1
+runtime: python27
+api_version: 1
+threadsafe: yes
+
+handlers:
+- url: /static
+  static_dir: static
+- url: /test
+  static_dir: test
+- url: /geo-location.*
+  script: geo-location.app
